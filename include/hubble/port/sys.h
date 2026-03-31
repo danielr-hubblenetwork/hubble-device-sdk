@@ -42,9 +42,9 @@ enum hubble_log_level {
 #endif
 
 /**
- * @brief Function pointer to retrieve the target system uptime.
+ * @brief Retrieve the target system uptime.
  *
- * This function pointer, when called, returns the current uptime of the
+ * This function returns the current uptime of the
  * target system. The uptime is measured in milliseconds since the
  * system was started.
  *
@@ -66,8 +66,8 @@ uint64_t hubble_uptime_get(void);
  * The sequence counter automatically wraps around to 0 when it reaches the
  * maximum value (1023).
  *
- * @note This function can be override by the application it with
- *       custom sequence counter logic defining the symbol
+ * @note This function can be overridden by the application with
+ *       custom sequence counter logic by defining the symbol
  *       `CONFIG_HUBBLE_NETWORK_SEQUENCE_NONCE_CUSTOM`
  *
  * @return The current sequence counter value (0-1023).
